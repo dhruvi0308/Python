@@ -1,0 +1,26 @@
+def wow(a):
+    result = a * 2
+    print( 'wow:', a, result)
+    return result
+def yay (a) :
+    result = wow(a) + wow(a + 2)
+    print('yay:', result, a)
+    return result
+number1 = 4
+number2 = 3
+print('global:', number1, number2)
+number2 = wow(number2)
+print('global:', number1, number2)
+yay (number1)
+print( 'global:', number1, number2)
+
+#output:
+output (the lines printed by the program)
+-----------------------------------------
+global: 4 3
+wow: 3 6
+global: 4 6
+wow: 4 8
+wow: 6 12
+yay: 20 4
+global: 4 6
